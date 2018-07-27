@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基本动画示例</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>基本动画示例</h1>
+    </div>
+
+    <div class="container">
+        <h4>位移</h1>
+            <svg width="120" height="120" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="10" width="100" height="100">
+                    <animate attributeType="XML" attributeName="x" from="-100" to="120" dur="10s" repeatCount="indefinite" />
+                </rect>
+            </svg>
+    </div>
+
+    <div class="container">
+        <h4>沿着路径移动</h1>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                <!-- Draw the outline of the motion path in grey, along
+               with 2 small circles at key points -->
+                <path d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110" stroke="lightgrey" stroke-width="2" fill="none" id="theMotionPath"
+                />
+                <circle cx="10" cy="110" r="3" fill="lightgrey" />
+                <circle cx="110" cy="10" r="3" fill="lightgrey" />
+
+                <!-- Red circle which will be moved along the motion path. -->
+                <circle cx="" cy="" r="5" fill="red">
+
+                    <!-- Define the motion path animation -->
+                    <animateMotion dur="6s" repeatCount="indefinite">
+                        <mpath xlink:href="#theMotionPath" />
+                    </animateMotion>
+                </circle>
+
+                <rect width="20" height="10" stroke="red" fill="transparent" stroke-width="1">
+
+                    <!-- Define the motion path animation -->
+                    <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
+                        <mpath xlink:href="#theMotionPath" />
+                    </animateMotion>
+                </rect>
+            </svg>
+    </div>
+
+    <div class="container">
+        <h4>旋转</h1>
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <polygon points="60,30 90,90 30,90 20, 30 50, 30">
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 60 70" to="360 60 70" dur="10s" repeatCount="indefinite"
+                    />
+                </polygon>
+            </svg>
+    </div>
+
+    <div class="container">
+        <h4>沿着路径移动 2</h1>
+            <svg width="100" height="60" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                <rect x="1" y="1" width="498" height="298" fill="none" stroke="blue" stroke-width="2" />
+
+                <!-- Draw the outline of the motion path in blue, along
+                with three small circles at the start, middle and end. -->
+                <path id="path1" d="M100,250 C 100,50 400,50 400,250" fill="none" stroke="blue" stroke-width="7.06" />
+                <circle cx="100" cy="250" r="17.64" fill="blue" />
+                <circle cx="250" cy="100" r="17.64" fill="blue" />
+                <circle cx="400" cy="250" r="17.64" fill="blue" />
+
+                <!-- Here is a triangle which will be moved about the motion path.
+            It is defined with an upright orientation with the base of
+            the triangle centered horizontally just above the origin. -->
+                <circle r="20" fill="yellow" stroke="red" stroke-width="7.06">
+                    <!-- Define the motion path animation -->
+                    <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
+                        <mpath xlink:href="#path1" />
+                    </animateMotion>
+                </circle>
+            </svg>
+    </div>
+
+    <div class="container">
+        <h4>跑马灯</h1>
+            <svg width="260" height="32" xmlns="http://www.w3.org/2000/svg" style="box-sizing: border-box;">
+                <text width="260" font-family="microsoft yahei" font-size="18" y="30" x="65.9824" style="box-sizing: border-box;color:#eb1313;">
+                    <tspan style="box-sizing: border-box;color:red;" fill="#333">
+                        ● &nbsp;这是一个很长很长很长很长很长很长很长的滚动标题
+                    </tspan>
+                    <animate attributename="x" from="260" to="-300" begin="0s" dur="13s" repeatcount="indefinite" style="box-sizing:border-box;"></animate>
+                </text>
+            </svg>
+    </div>
+
+    <div class="container">
+        <h4>弹幕</h1>
+            <svg width="640" height="600" xmlns="http://www.w3.org/2000/svg" style="box-sizing: border-box;border: 1px solid red;">
+                <text width="1000" font-family="microsoft yahei" font-size="18" y="30" x="65.9824">
+                    <tspan fill="blue">
+                        ● &nbsp;重新定义重新定义
+                    </tspan>
+                    <animate attributename="x" from="260" to="-640" begin="0s" dur="13s" repeatcount="indefinite" style="box-sizing:border-box;"></animate>
+                </text>
+
+                <text width="1000" font-size="18" y="50" x="100.9824">
+                    <tspan fill="#333">
+                        ● &nbsp;给每人发一个小米手环
+                    </tspan>
+                    <animate attributename="x" from="560" to="-640" begin="0s" dur="13s" repeatcount="indefinite" style="box-sizing:border-box;"></animate>
+                </text>
+
+                <text width="1000" font-family="microsoft yahei" font-size="22" y="50" x="100.9824">
+                    <tspan fill="deeppink">
+                        ● &nbsp;蓝猫淘气三千问
+                    </tspan>
+                    <animate attributename="x" from="760" to="-640" begin="0s" dur="13s" repeatcount="indefinite" style="box-sizing:border-box;"></animate>
+                </text>
+
+                <text width="1000" font-family="microsoft yahei" font-size="22" y="50" x="100.9824">
+                    <tspan fill="deeppink">
+                        ● &nbsp;测试测试测试
+                    </tspan>
+                    <animate attributename="x" from="760" to="-640" begin="0s" dur="13s" repeatcount="indefinite" style="box-sizing:border-box;"></animate>
+                </text>
+
+            </svg>
+    </div>
+
+</body>
+
+</html>

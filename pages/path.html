@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>rect</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>路径 path</h1>
+        <ul>
+            <li>路径是用的最多的</li>
+            <li>直线 、曲线都可以。具体参考: https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial/Paths</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <svg width="640" height="200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 10 H 90 V 90 H 10 L 10 10" stroke="red" stroke-width="3" fill="blue" />
+        </svg>
+    </div>
+
+    <div class="container">
+        <svg width="640" height="200" xmlns="http://www.w3.org/2000/svg">
+            <path d="m10 10 h 90 v 90 h -90 z" stroke="red" stroke-width="3" fill="blue" />
+        </svg>
+    </div>
+
+    <div class="container">
+        <svg width="640" height="200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M130 110 C 120 140, 180 140, 170 110" stroke="black" fill="transparent" />
+
+            <circle cx="130" cy="110" r="2" fill="red" />
+            <circle cx="120" cy="140" r="2" fill="red" />
+            <line x1="130" y1="110" x2="120" y2="140" stroke="#ddd" stroke-width="1" />
+
+            <circle cx="180" cy="180" r="2" fill="red" />
+            <circle cx="170" cy="110" r="2" fill="red" />
+            <line x1="180" y1="180" x2="170" y2="110" stroke="#ddd" stroke-width="1" />
+        </svg>
+    </div>
+
+</body>
+
+</html>

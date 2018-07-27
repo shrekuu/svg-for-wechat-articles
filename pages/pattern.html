@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pattern</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>纹理 mask</h1>
+        <ul>
+            <li>纹理内部元素定位, 为使纹理不变形, 使纹理内容部元素以单个纹理块为准入(patternContentUnits="default"), 使纹理块重复以容器(或)为准(patternUnits="userSpaceOnUse")
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <svg width="640" height="500" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="Gradient1">
+                    <stop offset="5%" stop-color="white" />
+                    <stop offset="95%" stop-color="blue" />
+                </linearGradient>
+                <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="5%" stop-color="red" />
+                    <stop offset="95%" stop-color="orange" />
+                </linearGradient>
+
+                <pattern id="Pattern" x="0" y="0" width="50" height="50" patternContentUnits="default" patternUnits="userSpaceOnUse">
+                    <rect x="0" y="0" width="50" height="50" fill="skyblue" />
+                    <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)" />
+                    <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5" />
+                </pattern>
+
+            </defs>
+
+            <rect fill="url(#Pattern)" stroke="black" x="0" y="0" width="200" height="400" />
+        </svg>
+    </div>
+
+</body>
+
+</html>

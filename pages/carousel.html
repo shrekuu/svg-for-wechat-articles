@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>carousel</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>5 张图片, 只能轮播一圈</h1>
+        <p>参考:
+            <a href="http://url.cn/5lagQT8">你初中班主任让我把这套题发给你</a>
+        </p>
+        <div style="width: 300px;overflow:hidden;">
+            <svg width="300" height="300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g>
+                    <animate attributeName="opacity" begin="click+.5s" dur=".7s" values="1;0;0;0;0;1" fill="freeze"></animate>
+                    <animateTransform attributeName="transform" type="translate" values="0 0;-300 0" fill="freeze" begin="click+.5s" dur=".5s"></animateTransform>
+                    <g>
+                        <animate attributeName="opacity" begin="click+.5s" dur=".7s" values="1;0;0;0;0;1" fill="freeze"></animate>
+                        <animateTransform attributeName="transform" type="translate" values="0 0;-300 0" fill="freeze" begin="click+.5s" dur=".5s"></animateTransform>
+                        <g>
+                            <animate attributeName="opacity" begin="click+.5s" dur=".7s" values="1;0;0;0;0;1" fill="freeze"></animate>
+                            <animateTransform attributeName="transform" type="translate" values="0 0;-300 0" fill="freeze" begin="click+.5s" dur=".5s"></animateTransform>
+                            <g>
+                                <animate attributeName="opacity" begin="click+.5s" dur=".7s" values="1;0;0;0;0;1" fill="freeze"></animate>
+                                <animateTransform attributeName="transform" type="translate" values="0 0;-300 0" fill="freeze" begin="click+.5s" dur=".5s"></animateTransform>
+                                <g>
+                                    <!-- 停止到第 5 张图片上 -->
+                                    <animate attributeName="opacity" begin="click+.5s" dur=".7s" values="1;0;0;0;0;1" fill="freeze"></animate>
+                                    <image x="1200" y="0" width="300" height="300" fill="red" xlink:href="http://placehold.it/300&text=5">
+                                    </image>
+                                </g>
+                                <image x="900" y="0" width="300" height="300" fill="red" xlink:href="http://placehold.it/300&text=4">
+                                </image>
+                            </g>
+                            <image x="600" y="0" width="300" height="300" fill="red" xlink:href="http://placehold.it/300&text=3">
+                            </image>
+                        </g>
+                        <image x="300" y="0" width="300" height="300" fill="red" xlink:href="http://placehold.it/300&text=2">
+                        </image>
+                    </g>
+                    <image x="0" y="0" width="300" height="300" fill="red" xlink:href="http://placehold.it/300&text=1">
+                    </image>
+                </g>
+            </svg>
+        </div>
+    </div>
+
+</body>
+
+</html>

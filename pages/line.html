@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>line</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>直线 line</h1>
+        <ul>
+            <li>x1 y1 第一个点位置</li>
+            <li>x2 y2 第二个点位置</li>
+            <li>stroke 线条颜色</li>
+            <li>stroke-width 线条宽度</li>
+            <li>stroke-linecap 线条两端样式, 三种, butt, square round, 见下面示例</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <line x1="40" x2="120" y1="20" y2="20" stroke="red" stroke-width="20" stroke-linecap="butt" />
+            <line x1="40" x2="120" y1="60" y2="60" stroke="green" stroke-width="20" stroke-linecap="square" />
+            <line x1="40" x2="120" y1="100" y2="100" stroke="blue" stroke-width="20" stroke-linecap="round" />
+        </svg>
+    </div>
+
+    <div class="container">
+        <svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <polyline points="40 60 80 20 120 60" stroke="black" stroke-width="20" stroke-linecap="butt" fill="none" stroke-linejoin="miter"
+            />
+
+            <polyline points="40 140 80 100 120 140" stroke="black" stroke-width="20" stroke-linecap="round" fill="none" stroke-linejoin="round"
+            />
+
+            <polyline points="40 220 80 180 120 220" stroke="black" stroke-width="20" stroke-linecap="square" fill="none" stroke-linejoin="bevel"
+            />
+        </svg>
+    </div>
+
+</body>
+
+</html>

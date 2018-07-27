@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>interactions</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>点击向右走掉消失</h1>
+        <svg width="120" height="120" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle id="my-circle" r="30" cx="50" cy="50" fill="orange" />
+            <animate xlink:href="#my-circle" attributeName="cx" from="50" to="450" dur="1s" begin="click" fill="freeze" />
+        </svg>
+    </div>
+
+    <div class="container">
+        <h1>点击放大</h1>
+        <svg width="120" height="120" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle r="30" cx="50" cy="50" fill="orange" transform-origin="60 60" transform="scale(1)" />
+            <animateTransform attributeName="transform" type="scale" values="1;2" fill="freeze" begin="click" dur="1s"></animateTransform>
+            </circle>
+        </svg>
+    </div>
+
+    <div class="container">
+        <h1>点击 1 秒后放大</h1>
+        <svg width="120" height="120" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle r="30" cx="50" cy="50" fill="orange" transform-origin="60 60" transform="scale(1)" />
+            <animateTransform attributeName="transform" type="scale" values="1;2" fill="freeze" begin="click+1s" dur="1s"></animateTransform>
+            </circle>
+        </svg>
+    </div>
+
+    <div class="container">
+        <h1>点击 0.5 秒后移出</h1>
+        <div style="width: 120px;overflow:hidden;">
+            <svg width="120" height="120" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="60" fill="orange" />
+                <animateTransform attributeName="transform" type="translateX" values="0;120" fill="freeze" begin="click+.5s" dur="1s" repeatCount="indefinite"></animateTransform>
+                </circle>
+            </svg>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>点击 0.5 秒后淡出</h1>
+        <div style="width: 120px;overflow:hidden;">
+            <svg width="120" height="120" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="60" fill="orange" />
+                <animate attributeName="opacity" begin="click+.5s" dur=".8s" values="1;0" fill="freeze"></animate>
+                <animateTransform attributeName="transform" type="translateX" values="0;120" fill="freeze" begin="click+.5s" dur="1s" repeatCount="indefinite"></animateTransform>
+                </circle>
+            </svg>
+        </div>
+    </div>
+
+</body>
+
+</html>

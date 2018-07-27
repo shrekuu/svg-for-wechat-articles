@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>iconic lightbulb no css</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>灯泡(无 css 版)</h1>
+        <ul>
+            <li>来自: http://tutsplus.github.io/Styling-Iconic/styling/index.html</li>
+            <li>尝试不使用 css, 由于元素要分组与嵌套, 无法完全实现 css 做的样式</li>
+        </ul>
+    </div>
+
+
+    <div class="container">
+        <svg version="1.1" class="iconic iconic-lightbulb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" width="714px" height="714px" viewBox="0 0 714 714" style="enable-background:new 0 0 714 714;" xml:space="preserve">
+            <g>
+                <animate xlink:href="#icon_container" attributeName="opacity" dur="2s" begin="mouseenter" to="1" fill="freeze"></animate>
+                <animate xlink:href="#icon_container" attributeName="opacity" dur="2s" begin="mouseout" to="0" fill="freeze"></animate>
+                <circle class="icon-container" id="icon_container" cx="357" cy="357" r="330" stroke-width="16" stroke="#fc0" fill="#fc0"
+                    opacity="0" />
+
+                <g class="iconic-lightbulb-screws">
+                    <defs>
+                        <clipPath id="iconic-lightbulb-screws-clip">
+                            <polygon points="304.333,511 433.667,511 430,521.5 281.667,547.167 280.333,521.5" fill="none" stroke="#333" stroke-width="16"
+                                stroke-linecap="round" />
+                        </clipPath>
+                    </defs>
+                    <line clip-path="url(#iconic-lightbulb-screws-clip)" x1="430" y1="505" x2="302" y2="529" fill="none" stroke="#333" stroke-width="16"
+                        stroke-linecap="round" />
+                    <line class="st4" x1="430" y1="537" x2="302" y2="561" fill="none" stroke="#333" stroke-width="16" stroke-linecap="round"
+                    />
+                    <line class="st4" x1="430" y1="569" x2="302" y2="593" fill="none" stroke="#333" stroke-width="16" stroke-linecap="round"
+                    />
+                    <line class="st4" x1="410" y1="605" x2="322" y2="621" fill="none" stroke="#333" stroke-width="16" stroke-linecap="round"
+                    />
+                </g>
+
+                <g class="iconic-lightbulb-light">
+                    <animate xlink:href="#iconic_lightbulb_light_clip_bottom_right" attributeName="stroke" dur="2s" begin="mouseenter" to="#fc0"
+                        fill="freeze"></animate>
+                    <animate xlink:href="#iconic_lightbulb_light_clip_bottom_right" attributeName="stroke-width" dur="2s" begin="mouseenter"
+                        to="32" fill="freeze"></animate>
+                    <animate xlink:href="#iconic_lightbulb_light_clip_bottom_right" attributeName="stroke" dur="2s" begin="mouseout" to="#ddd"
+                        fill="freeze"></animate>
+                    <animate xlink:href="#iconic_lightbulb_light_clip_bottom_right" attributeName="stroke-width" dur="2s" begin="mouseout" to="16"
+                        fill="freeze"></animate>
+                    <defs>
+                        <clipPath id="iconic-lightbulb-light-clip">
+                            <polygon points="514,329 436,369 436,436 299,436 293,360 489,280" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"
+                            />
+                        </clipPath>
+                    </defs>
+                    <g clip-path="url(#iconic-lightbulb-light-clip)">
+                        <line x1="330" y1="369" x2="330" y2="435" stroke="#ddd" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"
+                        />
+                        <polyline id="iconic_lightbulb_light_clip_bottom_right" points="478,313 402,349 402,435" stroke="#ddd" stroke-width="16"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                    <line x1="478" y1="129" x2="254" y2="233" stroke="#ddd" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"
+                    />
+                    <line x1="354" y1="125" x2="254" y2="173" stroke="#ddd" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"
+                    />
+                    <line x1="478" y1="189" x2="254" y2="293" stroke="#ddd" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"
+                    />
+                    <line x1="478" y1="249" x2="254" y2="353" stroke="#ddd" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"
+                    />
+                </g>
+
+                <path class="iconic-lightbulb-base" d="M292.431,505c0.863,4.314,5.169,7.845,9.569,7.845h128c4.4,0,8.706-3.53,9.569-7.845l12.861-64.311c0.863-4.314-2.03-7.845-6.431-7.845H286c-4.4,0-7.294,3.53-6.431,7.845L292.431,505z"
+                    fill="#666" />
+            </g>
+        </svg>
+    </div>
+
+</body>
+
+</html>

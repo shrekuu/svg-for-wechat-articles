@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>横向滚动 + 点击显示元素</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>横向滚动 + 点击显示元素</h1>
+        <p>参考:
+            <a href="http://url.cn/5BwFA56">这是一条很大很大的推送</a>
+        </p>
+        <div style="width:640px;height:800px;overflow-x: scroll;border: 1px dotted pink;">
+            <div style="width: calc(640px*2.2);">
+                <div style="width: 640px;height:800px;display:inline-block;overflow: hidden;">
+                    <svg width="640" height="800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <text x="50" y="50" font-size="20">这是一条很大的推送</text>
+                    </svg>
+                </div>
+                <div style="width: 640px;height:800px;display:inline-block;overflow: hidden;">
+                    <svg width="640" height="800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                        <g>
+                            <animate attributeName="opacity" begin="click" dur=".5s" values="1;0" fill="freeze" xlink:href="#cover1"></animate>
+                            <set attributeName="visibility" from="visible" to="hidden" begin="click+.5s"></set>
+                            <rect id="cover1" fill="transparent" width="640" height="800">
+                            </rect>
+                            <text x="50" y="50" fill="#000" color="red">点我显示</text>
+                        </g>
+
+                        <g opacity="0">
+                            <animate attributeName="opacity" begin="click+1s" dur="1s" values="0;1" fill="freeze"></animate>
+                            <rect x="0" y="0" width="640" height="800" fill="transparent"></rect>
+
+                            <image x="10" y="10" width="250" height="188" xlink:href="/images/kitten-1.jpg" transform-origin="125 90" transform="rotate(-10)"
+                            />
+
+                            <g opacity="0">
+                                <animate attributeName="opacity" begin="click+2s" dur="1s" values="0;1" fill="freeze"></animate>
+                                <rect x="0" y="0" width="640" height="800" fill="transparent"></rect>
+                                <image x="350" y="10" width="250" height="188" xlink:href="/images/kitten-2.jpg" transform-origin="450 90" transform="rotate(17)"
+                                />
+
+                                <g opacity="0">
+                                    <animate attributeName="opacity" begin="click+3s" dur="1s" values="0;1" fill="freeze"></animate>
+                                    <rect x="0" y="0" width="640" height="800" fill="transparent"></rect>
+
+                                    <image x="10" y="250" width="245" height="327" xlink:href="/images/kitten-3.jpg" transform-origin="120 370" transform="rotate(12)"
+                                    />
+
+                                    <g opacity="0">
+                                        <animate attributeName="opacity" begin="click+4s" dur="1s" values="0;1" fill="freeze"></animate>
+                                        <rect x="0" y="0" width="640" height="800" fill="transparent"></rect>
+                                        <image x="300" y="270" width="259" height="360" xlink:href="/images/kitten-4.jpg" transform-origin="450 90" transform="rotate(-8)"
+                                        />
+                                    </g>
+
+                                </g>
+
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>polyline</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>折线 polyline</h1>
+        <ul>
+            <li>points 为点的位置, 默认为闭合</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <svg width="640" height="500" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <!-- 去掉 points 里所有的逗号也可以 -->
+            <polyline points="60, 110 65, 120 70, 115 75, 130 80, 125 85, 140 90, 135 95, 150 100, 145" stroke="orange" fill="transparent"
+                stroke-width="5" />
+
+            <!-- 默认 -->
+            <polyline points="0,100 50,25 50,75 100,0" />
+
+            <!-- 设置线条颜色与不填充 -->
+            <polyline points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
+        </svg>
+
+
+    </div>
+
+</body>
+
+</html>
