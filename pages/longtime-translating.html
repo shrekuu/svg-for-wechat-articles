@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>circle</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>长距离位移, 非路径, 中途有停顿</h1>
+        <ul>
+            <li>就是普通的 transform translate, 但需要嵌套很多层</li>
+            <li>使用事件的延迟实现停顿效果</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <path id="path1" fill="none" stroke="blue" stroke-width="1" d="M26.5,93.5c59.6,3.7,101.3-8.5,129-21c24.1-10.9,38-22.2,52-16c24,10.6,27.8,63.3,16,101
+                    c-1.7,5.3-20.7,63.4-68,76c-39.5,10.5-66.6-19.3-83-5c-15.1,13.2-9.5,53.8,11,77c42.7,48.3,157.9,29.7,183-20
+                    c15.2-30.1-11.4-54.1,8-92c11.4-22.4,30.4-33,67-53c35.7-19.5,43.5-17,109-42c68.1-25.9,90.5-40.3,121-30c7.9,2.7,21,8.6,32,21
+                    c14.4,16.1,23.6,41.4,18,59c-13.3,41.7-109.9,41.1-122,41c-53.1-0.3-145.7-15.5-223-81c-29.8-25.3-48.6-50.6-93-66
+                    c-16.6-5.8-61.4-21.3-85,0c-21.3,19.2-21.8,65.1-3,95c27.8,44.3,110.6,49.1,275,57c22.2,1.1,69.7,3,135,9
+                    c124,11.3,140.7,21.3,145,34c8.5,25.3-30.9,65.3-68,81c-46.5,19.7-101.2,6.5-132-18c-7.7-6.2-9-9.1-18-15
+                    c-33.2-21.9-70.7-18.1-85-17c-118.3,9.3-189.2-44.1-233,0c-17.3,17.4-6.2,25.7-46,108c-16.9,34.9-21.7,39.3-19,47
+                    c13.6,38.1,168.5,31.4,292-13c94.4-33.9,163-87.2,208-130c16.8-22.2,41-51.8,73-84c81-81.4,128.4-94.6,125-123
+                    c-4.9-40.5-107.7-66.3-188-62c-32.7,1.8-113.2,6.1-130,46c-20.1,47.8,56.2,135,182,220c22.6,21.3,30.1,41.6,33,54
+                    c1.8,7.8,2.5,15.4,1,49c-1.7,37.6-2.5,56.5-4,62c-15.3,57.3-94.6,92.3-109,79c-7-6.5,1.2-24.5-6-28c-6.1-3-12.4,9.5-26,13
+                    c-25,6.4-45.8-25-58-18c-11.3,6.5,1.5,36.4-9,43c-15.6,9.7-58.3-47.4-79-37c-15.1,7.6-6.6,45.3-17,48c-13.9,3.7-36.3-62.2-56-59
+                    c-14.1,2.3-12.8,37.5-29,41c-18.8,4-33.4-40.3-56-38c-21.7,2.2-26.5,44.9-46,45c-18,0.1-25.6-36.2-42-35c-15.7,1.2-23.3,35.5-25,35
+                    c-2.6-0.8-1.4-91.5,57-149c22.9-22.5,41.3-26.8,172-67c120.8-37.1,148.5-46.9,155-71c5-18.7-12.7-44.5-48-96
+                    c-45.3-66-72.5-78.7-83-83c-18.4-7.5-55.8-17.5-63-6c-22,35.4,266.4,236.6,231,304c-11.7,22.3-53.9,20.8-71,62
+                    c-1.6,3.8-12.6,30.4-3,47c31.7,54.8,296.5,15.9,318-88c6.5-31.2-8.1-72.9-39-95c-81.8-58.4-204,73.4-354,66
+                    c-83.7-4.1-194.4-52.5-320-238" />
+            </defs>
+
+            <g>
+                <animateTransform attributeName="transform" type="translate" to="300 50" fill="freeze" begin="click+7s" dur="1s"></animateTransform>
+                <g>
+                    <animateTransform attributeName="transform" type="translate" to="300 -200" fill="freeze" begin="click+6s" dur="1s"></animateTransform>
+                    <g>
+                        <animateTransform attributeName="transform" type="translate" to="-200 -100" fill="freeze" begin="click+5s" dur="1s"></animateTransform>
+                        <g>
+                            <animateTransform attributeName="transform" type="translate" to="100 250" fill="freeze" begin="click+4s" dur="1s"></animateTransform>
+                            <g>
+                                <animateTransform attributeName="transform" type="translate" to="-100 0 " fill="freeze" begin="click+3s" dur="1s"></animateTransform>
+                                <g>
+                                    <animateTransform attributeName="transform" type="translate" to="0 100 " fill="freeze" begin="click+2s" dur="1s"></animateTransform>
+                                    <g>
+                                        <animateTransform attributeName="transform" type="translate" to="100 0" fill="freeze" begin="click+1" dur="1s"></animateTransform>
+
+                                        <image x="10" y="20" width="100" height="75" xlink:href="/images/flappy-bird.gif">
+                                        </image>
+                                        <text x="10" y="20">不沿路径走, 点击这里开始</text>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+
+            <g>
+                <animateMotion dur="40s" repeatCount="indefinite" rotate="auto">
+                    <mpath xlink:href="#path1" />
+                </animateMotion>
+                <image x="10" y="10" width="100" height="75" xlink:href="/images/flappy-bird.gif">
+                </image>
+                <text x="10" y="10">沿路径走</text>
+            </g>
+
+        </svg>
+    </div>
+
+</body>
+
+</html>
