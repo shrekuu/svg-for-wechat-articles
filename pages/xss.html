@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>viewBox</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>xss</h1>
+    </div>
+
+    <div class="container">
+        <img style="width: 100%" src="/fixtures/xss.svg">
+    </div>
+
+    <div class="container">
+        <svg width="640" height="500" xmlns="http://www.w3.org/2000/svg">
+            <a xlink:href="https://developer.mozilla.org/docs/Web/SVG/Element/circle">
+                <text x="50" y="90" text-anchor="middle">
+                    &lt;circle&gt;
+                </text>
+            </a>
+        </svg>
+    </div>
+</body>
+
+</html>

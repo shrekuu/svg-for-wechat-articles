@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250" height="40" version="1.1" viewBox="0 0 250 40">
+    <style>
+        <![CDATA[
+            text {
+                font: 20px Verdana, Helvetica, Arial, sans-serif;
+            }
+            tspan {
+                fill: red;
+                font-weight: bold
+            }
+            body {
+                background: pink;
+            }
+            ]]>
+    </style>
+    <script>
+        alert(&apos;hi&apos;);
+    </script>
+    <text x="15" y="30">
+        xss testing
+    </text>
+    <a xlink:href="/fixtures/xss.svg">
+        <text x="15" y="60">
+            link
+        </text>
+    </a>
+    <a xlink:href="https://developer.mozilla.org/docs/Web/SVG/Element/circle">
+        <text x="50" y="90" text-anchor="middle">
+            &lt;circle&gt;
+        </text>
+    </a>
+</svg>
