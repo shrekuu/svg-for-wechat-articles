@@ -1,0 +1,88 @@
+<svg version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 640 1192.702" enable-background="new 0 0 640 1192.702" xml:space="preserve" style="margin-left: 16px;margin-right: 16px;margin-top: 5px;">
+    <g transform="translate(-6400 0)">
+        <animateTransform attributeName="transform" type="translate" values="6400 0;5120 0;3840 0;2560 0;1280 0;0 0;-1280 0;-2560 0;-3840 0;-5120 0;-6400 0;-7680 0" repeatCount="indefinite" fill="freeze" begin="0s" end="click" dur="2s" calcMode="discrete"></animateTransform>
+        <g>
+            <rect x="6400" fill="#001f3f" width="640" height="1200"></rect>
+            <g>
+                <text font-weight="bold" font-size="160" fill="#fff" x="6400" y="200">自在</text>
+            </g>
+        </g>
+        <g>
+            <rect x="5120" fill="#0074D9" width="640" height="1200"></rect>
+            <g>
+                <text font-weight="bold" font-size="160" fill="#fff" x="5120" y="200">旺</text>
+            </g>
+        </g>
+        <g>
+            <rect x="3840" fill="#7FDBFF" width="640" height="1200"></rect>
+            <g>
+                <text font-weight="bold" font-size="160" fill="#fff" x="3840" y="200">做自已</text>
+            </g>
+        </g>
+        <g>
+            <rect x="2560" fill="#39CCCC" width="640" height="1200"></rect>
+            <g>
+                <text font-weight="bold" font-size="160" fill="#fff" x="2560" y="200">理想</text>
+            </g>
+        </g>
+        <g>
+            <rect x="1280" fill="#3D9970" width="640" height="1200"></rect>
+            <g>
+                <text font-weight="bold" font-size="160" fill="#fff" x="1280" y="200">挣脱</text>
+            </g>
+        </g>
+        <g>
+            <rect x="0" fill="#2ECC40" width="640" height="1200"></rect>
+            <g>
+                <text font-weight="bold" font-size="160" fill="#fff" x="0" y="200">当下</text>
+            </g>
+        </g>
+        <g>
+            <rect x="-1280" fill="#01FF70" width="640" height="1200"></rect>
+            <g>
+                <text font-weight="bold" font-size="160" fill="#fff" x="-1280" y="200">发现</text>
+            </g>
+        </g>
+        <g>
+            <rect x="-2560" fill="#FFDC00" width="640" height="1200"></rect>
+            <g>
+                <text font-weight="bold" font-size="160" fill="#fff" x="-2560" y="200">醒悟</text>
+            </g>
+        </g>
+        <g>
+            <rect x="-3840" fill="#FF851B" width="640" height="1200"></rect>
+            <g>
+                <text font-weight="bold" font-size="160" fill="#fff" x="-3840" y="200">放下</text>
+            </g>
+        </g>
+        <g>
+            <rect x="-5120" fill="#FF4136" width="640" height="1200"></rect>
+            <g>
+                <text font-weight="bold" font-size="160" fill="#fff" x="-5120" y="200">戏精</text>
+            </g>
+        </g>
+        <g>
+            <rect x="-6400" fill="#85144b" width="640" height="1200"></rect>
+            <g>
+                <text font-weight="bold" font-size="160" fill="#fff" x="-6400" y="200">充电</text>
+            </g>
+        </g>
+        <g>
+            <rect x="-7680" fill="#F012BE" width="640" height="1200"></rect>
+            <g>
+                <text font-weight="bold" font-size="160" fill="#fff" x="-7680" y="200">惊喜</text>
+            </g>
+        </g>
+    </g>
+    <g>
+        <set attributeName="visibility" from="visible" to="hidden" begin="click"></set>
+        <g>
+            <rect x="0" fill="#B10DC9" width="640" height="1200"></rect>
+            <g>
+                <text font-weight="bold" font-size="120" fill="#fff" x="0" y="200">你的 2019</text>
+            </g>
+        </g>
+    </g>
+</svg>
