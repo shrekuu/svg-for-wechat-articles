@@ -4,6 +4,10 @@
 
 克隆仓库, 双击 index.html 查看样式列表.  
 
+或在线查看:
+
+http://wechat-svg.projects.linwise.com/
+
 示例: 
 
 ![示例交互动画](screenshot.gif)
